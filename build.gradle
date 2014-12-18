@@ -1,7 +1,8 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'application'
 sourceCompatibility = 1.8
-//mainClassName = "com.wikia.helloworld.HelloWorldApplication"
+mainClassName = "com.wikia.pandora.PandoraApplication"
 version = "0.1.0"
 
 // In this section you declare where to find the dependencies of your project
@@ -30,4 +31,8 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
     //testCompile 'io.dropwizard:dropwizard-testing:0.6.2'
+}
+
+run {
+    args 'server', 'pandora.yaml'
 }
